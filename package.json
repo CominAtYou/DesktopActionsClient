@@ -1,0 +1,25 @@
+{
+  "name": "DesktopActions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-packager .\\ \"Desktop Actions\" --arch x64 --out ./bin/ --overwrite --icon .\\assets\\appicon.png"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^15.12.1",
+    "@types/uuid": "^8.3.0",
+    "electron": "^13.1.1"
+  },
+  "dependencies": {
+    "compare-versions": "^3.6.0",
+    "epxress": "0.0.1-security",
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  }
+}
