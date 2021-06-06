@@ -3,7 +3,6 @@ import cp = require('child_process');
 import { compare } from 'compare-versions';
 import os = require('os');
 import { requiredAppVersion, version } from './values';
-import config = require('./config.json');
 import { remote, nativeImage } from 'electron';
 let paused = false;
 const port = window.localStorage.getItem('port');
