@@ -1,2 +1,5 @@
 import { remote } from "electron";
-remote.getCurrentWindow().hide();
+document.getElementById('close').addEventListener('click', (e) => {
+    e.preventDefault();
+    remote.getCurrentWindow().hide();
+});

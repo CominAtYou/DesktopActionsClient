@@ -4,7 +4,7 @@
         <title>Desktop Actions</title>
     </head>
     <body>
-        <div id="close" onclick="require('./windowManager.js')">&#10006;</div>
+        <div id="close">&#10006;</div>
         <div id="content">
             <p class="subHeader" style="margin-top: 40px;" id="subtext"></p>
             <script>require('./subheader.js')</script>
@@ -25,8 +25,9 @@
                 <p id="notifDescription"class="description">Display a notification when a request to sleep or shut down has been scheduled.</p>
             </div>
         </div>
-        <script>require('./token.js')</script>
         <script src="ui.js"></script>
+        <script>require('./token.js')</script>
+        <script>require('./windowManager.js')</script>
         <script>require('./server.js')</script>
     </body>
 </html>
