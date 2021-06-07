@@ -6,7 +6,7 @@ async function install() {
     const start = new Date().getTime() / 1000;
     try {
         await electronInstaller.createWindowsInstaller({
-            appDirectory: './bin/Desktop Actions-win32-x64',
+            appDirectory: './bin/DesktopActions-win32-x64',
             outputDirectory: './bin/installers',
             authors: "CominAtYou",
             exe: "DesktopActions.exe",
