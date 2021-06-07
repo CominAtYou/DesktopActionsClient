@@ -12,7 +12,7 @@ async function install() {
             exe: "Desktop Actions.exe",
             name: "DesktopActions",
             title: "Desktop Actions",
-            loadingGif: null,
+            loadingGif: './bin/Desktop Actions-win32-x64/resources/app/assets/setupIcon.gif',
             noMsi: true,
             version: version,
             iconUrl: "https://cdn.cominatyou.com/appicon.ico",
