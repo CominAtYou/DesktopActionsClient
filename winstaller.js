@@ -12,12 +12,12 @@ async function install() {
             exe: "DesktopActions.exe",
             name: "DesktopActions",
             title: "Desktop Actions",
-            loadingGif: './bin/Desktop Actions-win32-x64/resources/app/assets/setupIcon.gif',
+            loadingGif: './bin/DesktopActions-win32-x64/resources/app/assets/setupIcon.gif',
             noMsi: true,
             version: version,
             iconUrl: "https://cdn.cominatyou.com/appicon.ico",
             description: "Desktop Actions",
-            setupIcon: './bin/Desktop Actions-win32-x64/resources/app/assets/appicon.ico',
+            setupIcon: './bin/DesktopActions-win32-x64/resources/app/assets/appicon.ico',
             setupExe: "DesktopActionsSetup.exe",
         });
         console.log(`Installer created! Took ${Math.round(new Date().getTime() / 1000 - start)}s`);
