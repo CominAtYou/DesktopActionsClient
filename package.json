@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-packager ./ \"Desktop Actions\" --platform win32 --arch x64 --out ./bin/ --overwrite --icon ./assets/appicon.png"
+    "build": "electron-packager ./ DesktopActions --platform win32 --arch x64 --out ./bin/ --overwrite --icon ./assets/appicon.png"
   },
   "keywords": [],
   "author": "",
