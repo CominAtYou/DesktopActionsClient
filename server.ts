@@ -19,7 +19,7 @@ if (os.platform() === "win32") {
 }
 
 expApp.get('/onlineCheck', (req, res) => {
-    if (req.header("Authorization") === `Token ${(document.getElementById('tokenInput') as HTMLInputElement).value}`) {
+    if (req.header("Authorization") === `Token ${window.localStorage.getItem('token')}`) {
         try {
             var isCompatible = compare(req.header('appVersion'), requiredAppVersion, '>=');
         }

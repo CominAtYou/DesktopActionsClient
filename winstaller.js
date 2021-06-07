@@ -18,7 +18,7 @@ async function install() {
             description: "Desktop Actions",
             setupIcon: './bin/Desktop Actions-win32-x64/resources/app/assets/appicon.ico',
             setupExe: "DesktopActionsSetup.exe",
-            setupMsi: "DesktopActionsSetupMS.msi"
+            setupMsi: "DesktopActionsSetup.msi"
         });
         console.log(`Installer created! Took ${Math.round(new Date().getTime() / 1000 - start)}s`);
     }
