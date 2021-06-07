@@ -9,7 +9,7 @@ async function install() {
             appDirectory: './bin/Desktop Actions-win32-x64',
             outputDirectory: './bin/installers',
             authors: "CominAtYou",
-            exe: "Desktop Actions.exe",
+            exe: "DesktopActions.exe",
             name: "DesktopActions",
             title: "Desktop Actions",
             loadingGif: './bin/Desktop Actions-win32-x64/resources/app/assets/setupIcon.gif',
