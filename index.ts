@@ -1,6 +1,15 @@
 import { app, BrowserWindow } from 'electron';
+import { handleSquirrelEvent } from './squirrelEvents';
+import updater = require('update-electron-app');
+
+if (require('electron-squirrel-startup')) app.quit();
+if (app.isPackaged) {
+    if (handleSquirrelEvent(app)) app.exit(0);
+}
 
 let win: BrowserWindow;
+
+if (app.isPackaged) updater();
 
 function createWindow() {
     win = new BrowserWindow({
