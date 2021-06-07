@@ -48,7 +48,7 @@ app.whenReady().then(() => {
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
     });
-    app.setAppUserModelId(process.execPath)
+    app.setAppUserModelId(app.isPackaged ? 'com.squirrel.DesktopActions.DesktopActions' : process.execPath);
 });
 
 
