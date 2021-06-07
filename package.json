@@ -10,12 +10,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-packager ./ DesktopActions --platform win32 --arch x64 --out ./bin/ --overwrite --icon ./assets/appicon.png"
+    "build": "electron-packager ./ \"Desktop Actions\" --platform win32 --arch x64 --out ./bin/ --overwrite --icon ./assets/appicon.png"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.12",
     "@types/node": "^15.12.1",
     "@types/uuid": "^8.3.0",
     "electron": "^13.1.1",

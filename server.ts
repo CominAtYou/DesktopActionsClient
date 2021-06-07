@@ -60,7 +60,7 @@ expApp.get('/onlineCheck', (req, res) => {
 });
 
 expApp.post('/', (req, res) => {
-    if (req.header("Authorization") === `Token ${(document.getElementById('tokenInput') as HTMLInputElement).value}`) {
+    if (req.header("Authorization") === `Token ${window.localStorage.getItem('token')}`) {
         try { // nuke all of this eventually lol
             var isCompatible = compare(req.body.version || req.header('appVersion'), requiredAppVersion, '>=');
         }
@@ -98,9 +98,9 @@ expApp.post('/', (req, res) => {
         else if (req.body.action === "shutdown") {
             res.status(200);
             res.send(JSON.stringify({ code: 200, status: "OK", paused: paused }));
-            const shutdownTimeout = setTimeout(() => { cp.exec(commands.shutdown); }, 10000);
+            const shutdownTimeout = setTimeout(() => cp.exec(commands.shutdown), 10000);
             if (window.localStorage.getItem('notificationsEnabled') === "true") {
-                const shutdownNotif = new Notification("Shutdown Remotely Requested",{
+                const shutdownNotif = new Notification("Shutdown Remotely Requested", {
                     body: "Your PC will shut down in 10 seconds. Click to cancel.",
                     icon: './assets/power-icon.png'
                 })
