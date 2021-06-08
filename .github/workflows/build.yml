@@ -19,6 +19,8 @@ jobs:
       run: tsc
     - name: Build for Windows x64
       run: npm run build
+    - name: Build Installer
+      run: node winstaller.js
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: "3.0.1"
