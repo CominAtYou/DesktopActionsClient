@@ -1,4 +1,6 @@
 # Desktop Actions Client
+![Build Status](https://github.com/CominAtYou/DesktopActionsClient/actions/workflows/build.yml/badge.svg)
+
 The desktop client for Desktop Actions, allowing you to remotely power off, lock, or put your computer to sleep, all from your (Android) phone.
 ![Screenshot](https://i.imgur.com/hdAqOHV.png)
 ## Features
