@@ -16,6 +16,27 @@
 body {
     background-color: #F7F7F7;
 }
+#subText {
+    margin-top: 40px;
+}
+.headerElem {
+    margin-top: 0px;
+}
+.portSettings {
+    margin-top: 24px;
+}
+#portInput {
+    margin-left: 80%; margin-right: 0px !important;
+}
+.settingName {
+    display: inline-block; margin-bottom: 0px;
+}
+#tokenInput {
+    margin-left: 78.4%; margin-right: 0px !important;
+}
+#notifCheckbox {
+    margin-left: 80.9%; margin-right: 0px !important;
+}
 .textbox {
     width: 85px;
     background-color: #FFFFFF;

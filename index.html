@@ -6,28 +6,30 @@
     <body>
         <div id="close">&#10006;</div>
         <div id="content">
-            <p class="subHeader" style="margin-top: 40px;" id="subtext"></p>
+            <p class="subHeader" id="subtext"></p>
             <script>require('./subheader.js')</script>
-            <h1 class="headerElem" style="margin-top: 0px;">Settings</h1>
-            <div id="portSettings" style="margin-top: 24px;">
-                <p style="display: inline-block; margin-bottom: 0px;"><b>Port</b></p>
-                <input type="number" max="65535" min="1" class="textbox" id="portInput" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="margin-left: 80%; margin-right: 0px !important;">
-                <p id="restartDescription" class="description">You will need to restart the app after changing this.</p>
+            <h1 class="headerElem">Settings</h1>
+            <div id="portSettings">
+                <p class="settingName"><b>Port</b></p>
+                <input type="number" max="65535" min="1" class="textbox" id="portInput" onkeydown="javascript: return event.keyCode === 69 ? false : true">
+                <p id="portSettingsDescription" class="description">You will need to restart the app after changing this.</p>
             </div>
             <div id="tokenSettings">
-                <b style="display: inline-block; margin-bottom: 0px;">Token</b>
-                <input type="text" id="tokenInput" class="textbox" style="margin-left: 78.4%; margin-right: 0px !important;">
+                <b class="settingName">Token</b>
+                <input type="text" id="tokenInput" class="textbox">
                 <p id="tokenDescription" class="description">Used to authenticate devices so they can communicate with your computer.</p>
             </div>
             <div id="notificationSettings">
-                <b style="display: inline-block;">Notifications</b>
-                <input type="checkbox" id="notifCheckbox" style="margin-left: 80.9%; margin-right: 0px !important;">
+                <b class="settingName">Notifications</b>
+                <input type="checkbox" id="notifCheckbox">
                 <p id="notifDescription"class="description">Display a notification when a request to sleep or shut down has been scheduled.</p>
             </div>
         </div>
         <script src="ui.js"></script>
-        <script>require('./token.js')</script>
-        <script>require('./windowManager.js')</script>
-        <script>require('./server.js')</script>
+        <script>
+            require('./token.js');
+            require('./windowManager.js');
+            require('./server.js');
+        </script>
     </body>
 </html>

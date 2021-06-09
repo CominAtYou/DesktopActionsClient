@@ -4,15 +4,13 @@ import updater = require('update-electron-app');
 
 if (require('electron-squirrel-startup')) app.quit();
 
-if (app.isPackaged) {
-    if (handleSquirrelEvent(app)) app.exit(0);
-}
-
-let win: BrowserWindow;
+if (app.isPackaged && handleSquirrelEvent(app)) app.exit(0);
 
 updater({
     notifyUser: false
-})
+});
+
+let win: BrowserWindow;
 
 function createWindow() {
     win = new BrowserWindow({
@@ -34,6 +32,7 @@ function createWindow() {
 
 const lock = app.requestSingleInstanceLock();
 
+// if a second instance of the app is opened, make it quit and focus the main window
 if (!lock) {
     app.quit();
 } else {
