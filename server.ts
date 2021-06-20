@@ -98,7 +98,9 @@ expApp.post('/', (req, res) => {
         else if (req.body.action === "shutdown") {
             res.status(200);
             res.send(JSON.stringify({ code: 200, status: "OK", paused: paused }));
-            const shutdownTimeout = setTimeout(() => cp.exec(commands.shutdown), 10000);
+            const shutdownTimeout = setTimeout(() => {
+                cp.exec(commands.shutdown);
+            }, 10000);
             if (window.localStorage.getItem('notificationsEnabled') === "true") {
                 const shutdownNotif = new Notification("Shutdown Remotely Requested", {
                     body: "Your PC will shut down in 10 seconds. Click to cancel.",

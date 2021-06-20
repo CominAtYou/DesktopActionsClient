@@ -6,6 +6,10 @@ if (require('electron-squirrel-startup')) app.quit();
 
 if (app.isPackaged && handleSquirrelEvent(app)) app.exit(0);
 
+const lock = app.requestSingleInstanceLock();
+
+if (!lock) app.quit(); // if a second instance of the app is opened, make it quit and focus the main window
+
 updater({
     notifyUser: false
 });
@@ -30,19 +34,6 @@ function createWindow() {
     win.hide();
 }
 
-const lock = app.requestSingleInstanceLock();
-
-// if a second instance of the app is opened, make it quit and focus the main window
-if (!lock) {
-    app.quit();
-} else {
-    app.on('second-instance', () => {
-        if (win) {
-            win.show();
-        }
-    })
-}
-
 app.whenReady().then(() => {
     createWindow();
     app.on('activate', () => {
@@ -54,4 +45,14 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', () => {
     if (process.platform === 'darwin') app.quit();
+});
+
+app.on('quit', () => {
+  app.quit();
+})
+
+app.on('second-instance', () => {
+    if (win) {
+        win.show();
+    }
 });
