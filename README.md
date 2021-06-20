@@ -12,9 +12,10 @@ Do note that this is exclusive to Android and Windows. I don't have a Mac (yet) 
 
 **This was designed for and will work with Windows 10. For earlier versions of Windows, a version with Windows Powershell is required.** They should work as well as if it were running on Windows 10, but YMMV when it comes to notifications.
 ## Getting Set Up
-1. Download latest version from the [releases](https://github.com/CominAtYou/DesktopActionsClient/releases/latest) page.
-2. Open the app, and customize the settings to your liking, or stick with the preset, randomly-generated values.
-3. Fill out the settings on your mobile app.
+1. **[Windows] If you want the sleep functionality to work, you will need to disable hibernation.** You can do so by running `powercfg -hibernate off` from an elevated shell.
+2. Download latest version from the [releases](https://github.com/CominAtYou/DesktopActionsClient/releases/latest) page.
+3. Open the app, and customize the settings to your liking, or stick with the preset, randomly-generated values.
+4. Fill out the settings on your mobile app.
 ## Building
 1. `tsc`
 2. `npm run build`
