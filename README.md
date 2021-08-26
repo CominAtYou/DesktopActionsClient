@@ -10,7 +10,7 @@ The desktop client for Desktop Actions, allowing you to remotely power off, lock
 ## Important Stuff
 Do note that this is exclusive to Android and Windows. I don't have a Mac (yet) so I can't create a client for macOS. An iOS app is out of the question since trying to install anything outside of the App Store is literal witchcraft. Linux support is coming down the road.
 
-**This was designed for and will work with Windows 10. For earlier versions of Windows, a version with Windows Powershell is required.** They should work as well as if it were running on Windows 10, but YMMV when it comes to notifications.
+**This was designed for and will work with Windows 10 and any subsequent versions. For earlier versions of Windows, a version with Windows Powershell is required.** They should work as well as if it were running on Windows 10, but YMMV when it comes to notifications.
 ## Getting Set Up
 1. **[Windows] If you want the sleep functionality to work, you will need to disable hibernation.** You can do so by running `powercfg -hibernate off` from an elevated shell.
 2. Download latest version from the [releases](https://github.com/CominAtYou/DesktopActionsClient/releases/latest) page.
